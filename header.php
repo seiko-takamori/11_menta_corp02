@@ -33,7 +33,7 @@
     <?php wp_body_open(); ?>
 
     <header class="header">
-        <h1><a href="<?php echo home_url(); ?>">Logo</a></h1>
+        <h1 class="header-logo"><a href="<?php echo home_url(); ?>"><img src="<?= get_template_directory_uri(); ?>/img/Logo.svg" alt=""></a></h1>
         <nav class="header-nav">
             <?php
             $args = array(

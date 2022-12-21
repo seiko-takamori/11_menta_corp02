@@ -1,0 +1,36 @@
+//親セレクタを変更してスタイルを変えたい時
+@mixin replace($original, $replacement) {
+    @at-root #{selector-replace(&, $original, $replacement)} {
+        @content;
+    }
+}
+//親セレクタを変更して同一スタイルを適用したい時
+@mixin extend($original, $inherit) {
+    @at-root #{selector-extend(&, $original, $inherit)} {
+        @content;
+    }
+}
+@mixin fz_vw($font_size: 10) {
+    font-size: $font_size * 1px;
+    font-size: get_vw($font_size);
+}
+
+@function get_vw($size, $viewport: 375) {
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+}
+@function calc_fz($size, $viewport: 375) {
+    $rate: calc(100 / $viewport);
+    @return clamp(12px, #{$rate * $size}vw, #{$size}px);
+}
+
+@mixin fz_vw($font_size: 10) {
+    font-size: $font_size * 1px;
+    font-size: get_vw($font_size);
+}
+
+@mixin font($fontsize: 12px, $fontspece: 0.08em, $lineheight: 1.8) {
+    font-size: $fontsize;
+    letter-spacing: $fontspece;
+    line-height: $lineheight;
+}

@@ -1,0 +1,43 @@
+//-----------------------------
+//　ブレイクポイント
+//-----------------------------
+$breakpoints: (
+    "sm": "screen and (max-width: 575.98px)",
+    "md": "screen and (max-width: 767.98px)",
+    "lg": "screen and (max-width: 991.98px)",
+    "xl": "screen and (max-width: 1280px)",
+    "xxl": "screen and (max-width: 1400px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+//-----------------------------
+//　color
+//-----------------------------
+
+$color_green: green;
+$color_black: #0f0f0f;
+$color_gray:#7e807c;
+$color_gray_bg: #ededed;
+
+//-----------------------------
+//　font
+//-----------------------------
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+$font_poppins: "Poppins", sans-serif;
+//-----------------------------
+//　common
+//-----------------------------
+a {
+    text-decoration: none;
+    color: $color_black;
+    &:visited {
+        color: $color_black;
+    }
+}
+img {
+    width: 100%;
+}

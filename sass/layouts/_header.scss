@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    height: get_vw(100, $w_pc);
+    display: flex;
+    justify-content: space-between;
+    padding-left: get_vw(26, $w_pc);
+    padding-right: get_vw(40, $w_pc);
+    padding-top: get_vw(29, $w_pc);
+    &-logo {
+        width: get_vw(117, $w_pc);
+        height: get_vw(42, $w_pc);
+        background: $color_black;
+        a {
+            color: white;
+        }
+    }
+    &-nav {
+        ul {
+            display: flex;
+            gap: get_vw(65, $w_pc);
+            li {
+                a {
+                    font-family: "Helvetica Neue";
+                    font-weight: 500;
+                    font-size: calc_fz(16, $w_pc);
+                    line-height: calc(40 / 16);
+                }
+            }
+        }
+    }
+}
