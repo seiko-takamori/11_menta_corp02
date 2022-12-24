@@ -1,0 +1,35 @@
+@use "foundation" as f;
+
+.footer {
+    background: f.$color_black;
+    padding: f.get_vw(100, f.$w_pc) f.get_vw(144, f.$w_pc);
+    a {
+        color: white;
+    }
+    &-inner {
+        width: f.get_vw(1080, f.$w_pc);
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+    ul[id^="menu-footer"] {
+        display: flex;
+        gap: f.get_vw(30, f.$w_pc);
+        &:not(:last-of-type) {
+            margin-bottom: f.get_vw(20, f.$w_pc);
+        }
+
+        &:not(:first-of-type) {
+            margin-left: f.get_vw(90, f.$w_pc);
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: flex-end;
+        gap: f.get_vw(68, f.$w_pc);
+        margin-top: f.get_vw(70, f.$w_pc);
+        small {
+            color: white;
+        }
+    }
+}

@@ -1,15 +1,17 @@
+@use "../foundation/" as f;
+
 .header {
     width: 100%;
-    height: get_vw(100, $w_pc);
+    height: f.get_vw(100, f.$w_pc);
     display: flex;
     justify-content: space-between;
-    padding-left: get_vw(26, $w_pc);
-    padding-right: get_vw(40, $w_pc);
-    padding-top: get_vw(29, $w_pc);
+    padding-left: f.get_vw(26, f.$w_pc);
+    padding-right: f.get_vw(40, f.$w_pc);
+    padding-top: f.get_vw(29, f.$w_pc);
     &-logo {
-        width: get_vw(117, $w_pc);
-        height: get_vw(42, $w_pc);
-        background: $color_black;
+        width: f.get_vw(117, f.$w_pc);
+        height: f.get_vw(42, f.$w_pc);
+        background: f.$color_black;
         a {
             color: white;
         }
@@ -17,13 +19,48 @@
     &-nav {
         ul {
             display: flex;
-            gap: get_vw(65, $w_pc);
+            gap: f.get_vw(65, f.$w_pc);
+            height: f.get_vw(70, f.$w_pc);
             li {
                 a {
                     font-family: "Helvetica Neue";
                     font-weight: 500;
-                    font-size: calc_fz(16, $w_pc);
+                    font-size: f.calc_fz(16, f.$w_pc);
                     line-height: calc(40 / 16);
+                }
+            }
+        }
+    }
+    .menu-item-has-children {
+        position: relative;
+        .sub-menu {
+            &.down {
+                display: flex;
+            }
+            display: none;
+            position: absolute;
+            top: f.get_vw(70, f.$w_pc);
+            left: f.get_vw(-70, f.$w_pc);
+            background: red;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            z-index: 9;
+            width: f.get_vw(220, f.$w_pc);
+            height: f.get_vw(165, f.$w_pc);
+            padding: f.get_vw(35, f.$w_pc) 0;
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: f.get_vw(140, f.$w_pc);
+                &::after {
+                    content: "";
+                    display: block;
+                    width: f.get_vw(20, f.$w_pc);
+                    height: f.get_vw(20, f.$w_pc);
+                    background: url(../img/icon_arrow_circle.svg) no-repeat;
+                    background-size: contain;
                 }
             }
         }

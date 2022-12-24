@@ -1,0 +1,65 @@
+@use "foundation" as f;
+.imgTxt {
+    display: flex;
+    gap: f.get_vw(90, f.$w_pc);
+    margin-bottom: f.get_vw(100, f.$w_pc);
+    &-txt {
+        width: f.get_vw(585, f.$w_pc);
+
+        &__title {
+            font-family: YuGothic;
+            font-weight: bold;
+            font-size: f.calc_fz(36, f.$w_pc);
+            letter-spacing: 0.02em;
+            line-height: calc(50 / 36);
+            margin-bottom: f.get_vw(50, f.$w_pc);
+
+            span {
+                font-family: "Helvetica Neue";
+                font-weight: 500;
+                font-size: f.calc_fz(14, f.$w_pc);
+                line-height: calc(20 / 14);
+                text-align: left;
+                color: f.$color_gray;
+                display: block;
+                margin-bottom: f.get_vw(21, f.$w_pc);
+            }
+        }
+        &__txt {
+            font-family: YuGothic;
+            font-weight: 500;
+            font-size: f.calc_fz(15, f.$w_pc);
+            letter-spacing: 0.04em;
+            line-height: calc(35 / 15);
+            text-align: left;
+            color: f.$color_gray;
+            margin-bottom: f.get_vw(50, f.$w_pc);
+        }
+    }
+    &-img {
+        width: f.get_vw(638, f.$w_pc);
+    }
+    &:nth-of-type(even) {
+        justify-content: flex-end;
+    }
+}
+.imgTxt-wrap {
+    position: relative;
+    height: f.get_vw(800, f.$w_pc);
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: f.get_vw(1223, f.$w_pc);
+        height: f.get_vw(800, f.$w_pc);
+        background: f.$color_gray_bg;
+    }
+    .imgTxt {
+        position: absolute;
+        top: f.get_vw(150, f.$w_pc);
+        right: 0;
+        z-index: 1;
+    }
+}

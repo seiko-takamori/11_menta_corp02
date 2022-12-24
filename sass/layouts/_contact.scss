@@ -1,0 +1,40 @@
+@use "foundation" as f;
+
+.contact {
+    background: url("../img/bg_contact.jpg") no-repeat;
+    background-size: cover;
+    height: f.get_vw(499, f.$w_pc);
+    &-box {
+        width: f.get_vw(700, f.$w_pc);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        margin: auto;
+        padding-top: f.get_vw(213, f.$w_pc);
+
+        &__title {
+            font-family: "Helvetica Neue";
+            font-weight: 500;
+            font-size: f.calc_fz(60, f.$w_pc);
+            line-height: calc(72 / 60);
+            margin-bottom: f.get_vw(15.8, f.$w_pc);
+        }
+        p {
+            font-family: YuGothic;
+            font-weight: 500;
+            font-size: f.calc_fz(15, f.$w_pc);
+            letter-spacing: 0.02em;
+            line-height: 1;
+        }
+    }
+    .btn-more {
+        color: white;
+        span {
+            &::before {
+                background: url("../img/icon_arrow_white.svg") no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
