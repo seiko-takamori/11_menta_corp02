@@ -21,11 +21,15 @@
 
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/sass/style.css?<?php echo date('Ymd-Hi'); ?>">
 
+    <!-- swiper
+    ================================================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- javascript
 ================================================== -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/common.js"></script>
+    <!-- <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/common.js"></script> -->
     <?php wp_head(); ?>
 </head>
 

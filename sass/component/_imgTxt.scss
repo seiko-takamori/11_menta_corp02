@@ -7,7 +7,7 @@
         width: f.get_vw(585, f.$w_pc);
 
         &__title {
-            font-family: YuGothic;
+            font-family: f.$font_YuGothic;
             font-weight: bold;
             font-size: f.calc_fz(36, f.$w_pc);
             letter-spacing: 0.02em;
@@ -26,7 +26,7 @@
             }
         }
         &__txt {
-            font-family: YuGothic;
+            font-family: f.$font_YuGothic;
             font-weight: 500;
             font-size: f.calc_fz(15, f.$w_pc);
             letter-spacing: 0.04em;

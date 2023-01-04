@@ -34,3 +34,8 @@
     letter-spacing: $fontspece;
     line-height: $lineheight;
 }
+
+@mixin font_helvetica() {
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+}

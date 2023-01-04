@@ -1,4 +1,5 @@
 <?php
+
 /**
  * <title>タグを出力する
  */
@@ -32,3 +33,13 @@ function change_post_tag_to_checkbox()
     register_taxonomy('post_tag', 'post', $args);
 }
 add_action('init', 'change_post_tag_to_checkbox', 1);
+/**
+ * デフォルトjQuery削除
+ */
+function delete_jquery()
+{
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+    }
+}
+add_action('init', 'delete_jquery');

@@ -21,7 +21,7 @@
             margin-bottom: f.get_vw(15.8, f.$w_pc);
         }
         p {
-            font-family: YuGothic;
+            font-family: f.$font_YuGothic;
             font-weight: 500;
             font-size: f.calc_fz(15, f.$w_pc);
             letter-spacing: 0.02em;
