@@ -1,3 +1,12 @@
+<div class="breadcrumb">
+    <div class="breadcrumb__inner">
+        <?php
+        if (function_exists('bcn_display')) {
+            bcn_display();
+        }
+        ?>
+    </div>
+</div>
 <div class="contact">
     <div class="contact-box">
         <div class="contact-box__txt">

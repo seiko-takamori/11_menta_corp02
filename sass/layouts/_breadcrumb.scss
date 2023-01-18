@@ -1,0 +1,15 @@
+@use "foundation" as f;
+
+.breadcrumb {
+    height: f.get_vw(60, f.$w_pc);
+    background: #ededed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: f.get_vw(143, f.$w_pc);
+
+    a.post,
+    span.post {
+        color: #7e807c;
+    }
+}

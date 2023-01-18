@@ -1,0 +1,257 @@
+@use "foundation" as f;
+
+.page {
+    .main {
+        padding-bottom: f.get_vw(100, f.$w_pc);
+        &__title {
+            width: f.get_vw(1080, f.$w_pc);
+            margin: auto;
+            font-family: "Helvetica Neue";
+            font-weight: 500;
+            font-size: f.calc_fz(60, f.$w_pc);
+            line-height: 1;
+            margin-bottom: f.get_vw(70, f.$w_pc);
+            span {
+                display: block;
+                font-family: f.$font_YuGothic;
+                font-weight: 500;
+                font-size: 15px;
+                letter-spacing: 0.02em;
+                line-height: 1;
+                color: f.$color_gray;
+                margin-top: f.get_vw(20, f.$w_pc);
+            }
+        }
+
+        &__tablist {
+            display: flex;
+            li {
+                height: f.get_vw(39, f.$w_pc);
+                border-radius: f.get_vw(19.5, f.$w_pc);
+                border: 1px solid f.$color_black;
+            }
+        }
+
+        #menu-company {
+            display: flex;
+            width: f.get_vw(990, f.$w_pc);
+            margin: auto;
+            margin-bottom: f.get_vw(100, f.$w_pc);
+            gap: f.get_vw(10, f.$w_pc);
+
+            .menu-item {
+                a {
+                    display: block;
+                    height: f.get_vw(39, f.$w_pc);
+                    border-radius: f.get_vw(19.5, f.$w_pc);
+                    border: 1px solid f.$color_black;
+                    font-family: "Helvetica Neue";
+                    font-weight: 500;
+                    font-size: f.calc_fz(18, f.$w_pc);
+                    line-height: 1;
+                    padding: f.get_vw(8, f.$w_pc) f.get_vw(27, f.$w_pc);
+                }
+                &.current-menu-item {
+                    a {
+                        background: f.$color_black;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        &-content {
+            &__title {
+                width: f.get_vw(990, f.$w_pc);
+                margin: auto;
+                font-family: "Helvetica Neue";
+                font-weight: 500;
+                font-size: f.calc_fz(35, f.$w_pc);
+                line-height: calc(42 / 35);
+                margin-bottom: f.get_vw(70, f.$w_pc);
+
+                span {
+                    display: block;
+                    font-family: f.$font_YuGothic;
+                    font-weight: 500;
+                    font-size: f.calc_fz(15, f.$w_pc);
+                    letter-spacing: 0.02em;
+                    line-height: 1;
+                    color: f.$color_gray;
+                    margin-top: f.get_vw(20, f.$w_pc);
+                }
+            }
+            &__img {
+                width: f.get_vw(1178, f.$w_pc);
+                margin-left: auto;
+                margin-bottom: f.get_vw(70, f.$w_pc);
+            }
+            &__detail {
+                width: f.get_vw(900, f.$w_pc);
+                margin: auto;
+                font-family: f.$font_YuGothic;
+                padding-bottom: f.get_vw(150, f.$w_pc);
+
+                h4 {
+                    font-weight: bold;
+                    font-size: f.calc_fz(35, f.$w_pc);
+                    letter-spacing: -0.01em;
+                    line-height: calc(46 / 35);
+                    margin-bottom: f.get_vw(40, f.$w_pc);
+
+                    span {
+                        display: block;
+                        font-size: f.calc_fz(15, f.$w_pc);
+                        letter-spacing: 0.02em;
+                        line-height: 1;
+                        color: #7e807c;
+                        margin-top: f.get_vw(20, f.$w_pc);
+                    }
+                }
+                p {
+                    font-weight: 500;
+                    font-size: f.calc_fz(15, f.$w_pc);
+                    letter-spacing: 0.02em;
+                    line-height: calc(25 / 15);
+                    margin-bottom: 1em;
+                }
+                figure {
+                    aspect-ratio: (320/200);
+                    border: 1px solid #afafaf;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: f.get_vw(20, f.$w_pc);
+
+                    & + p {
+                        text-align: center;
+                        font-weight: 500;
+                        font-size: f.calc_fz(15, f.$w_pc);
+                        letter-spacing: 0.02em;
+                        line-height: 1;
+                        color: #0f0f0f;
+
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: f.get_vw(14, f.$w_pc);
+                            height: f.get_vw(10, f.$w_pc);
+                            background: url(../img/icon_link.svg);
+                            margin-left: f.get_vw(5, f.$w_pc);
+                        }
+                    }
+                }
+                .mt_140 {
+                    margin-top: f.get_vw(140, f.$w_pc);
+                }
+            }
+        }
+    }
+    .company {
+        &-pager {
+            display: flex;
+            justify-content: space-between;
+            width: f.get_vw(990, f.$w_pc);
+            margin: auto;
+
+            &__title {
+                font-family: "Helvetica Neue";
+                font-weight: 500;
+                font-size: f.calc_fz(28, f.$w_pc);
+                line-height: 1;
+                span {
+                    display: block;
+                    font-family: f.$font_YuGothic;
+                    font-weight: 500;
+                    font-size: f.calc_fz(12, f.$w_pc);
+                    letter-spacing: 0.02em;
+                    line-height: 1;
+                    border: none;
+                    border-radius: 0;
+                    width: auto;
+                    height: auto;
+                    margin-top: f.get_vw(10, f.$w_pc);
+                    margin-left: 0;
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+
+            li {
+                width: f.get_vw(450, f.$w_pc);
+                height: f.get_vw(127, f.$w_pc);
+                position: relative;
+                border-top: 1px solid #d1d1d1;
+
+                &.current {
+                    display: none;
+                }
+
+                .btn-more {
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: unset;
+                    margin-top: f.get_vw(37.5, f.$w_pc);
+                }
+            }
+        }
+    }
+    .profile {
+        .main-content-top {
+            display: flex;
+            justify-content: space-between;
+            width: f.get_vw(990, f.$w_pc);
+            margin: auto;
+            margin-bottom: f.get_vw(246, f.$w_pc);
+
+            .main-content__title {
+                width: fit-content;
+                margin: unset;
+                margin-left: 0;
+            }
+
+            &__table {
+                width: f.get_vw(585, f.$w_pc);
+
+                tr {
+                    &:first-of-type {
+                        th {
+                            padding-top: 0;
+                        }
+                    }
+
+                    th {
+                        width: f.get_vw(180, f.$w_pc);
+                        line-height: 1;
+                        padding: f.get_vw(25, f.$w_pc) 0;
+                        border-bottom: 1px solid #afafaf;
+                    }
+                    td {
+                        width: f.get_vw(405, f.$w_pc);
+                    }
+                }
+            }
+        }
+    }
+    .philosophy {
+        .main-content__title-under {
+            width: f.get_vw(990, f.$w_pc);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            &__title {
+                width: fit-content;
+                font-weight: bold;
+                font-size: f.calc_fz(31,f.$w_pc)
+                letter-spacing: 0.05em;
+                line-height: calc(42/31);
+                color: #0f0f0f;
+            }
+            &__txt {
+                width: f.get_vw(585, f.$w_pc);
+            }
+        }
+    }
+}

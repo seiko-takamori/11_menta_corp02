@@ -1,13 +1,6 @@
-<?php
-
-/**
- * Template Name: 会社概要テンプレート
- */
-?>
-
 <?php get_header(); ?>
 
-<main class="main company">
+<main class="main company philosophy">
     <h2 class="main__title">COMPANY<span>会社情報</span></h2>
 
     <?php if (have_posts()) : ?>
@@ -25,6 +18,11 @@
 
             <div class="main-content">
                 <h3 class="main-content__title"><?php echo strtoupper($post->post_name); ?><span><?php the_field('title_ja'); ?></span></h3>
+
+                <div class="main-content__title-under">
+                    <p class="main-content__title-under__title">お茶の未来を<br>変えていく</p>
+                    <p class="main-content__title-under__txt">お茶の文化と価値を大切にし、今までの知識や飲み方だけにこだわらない一人一人のライフスタイルに合った​新しい楽しみ方を発信し続けます</p>
+                </div>
 
                 <?php if (has_post_thumbnail()) : ?>
                     <div class="main-content__img">
@@ -58,7 +56,7 @@
             </ul>
 
         <?php endwhile; ?>
-    <?php endif; ?>    
+    <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

@@ -1,13 +1,6 @@
-<?php
-
-/**
- * Template Name: 会社概要テンプレート
- */
-?>
-
 <?php get_header(); ?>
 
-<main class="main company">
+<main class="main company profile">
     <h2 class="main__title">COMPANY<span>会社情報</span></h2>
 
     <?php if (have_posts()) : ?>
@@ -24,7 +17,32 @@
             ?>
 
             <div class="main-content">
-                <h3 class="main-content__title"><?php echo strtoupper($post->post_name); ?><span><?php the_field('title_ja'); ?></span></h3>
+
+                <div class="main-content-top">
+                    <h3 class="main-content__title"><?php echo strtoupper($post->post_name); ?><span><?php the_field('title_ja'); ?></span></h3>
+                    <table class="main-content-top__table">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社 Tea</td>
+                        </tr>
+                        <tr>
+                            <th>代表者</th>
+                            <td>代表取締役社長　平尾誠</td>
+                        </tr>
+                        <tr>
+                            <th>役員</th>
+                            <td>なし</td>
+                        </tr>
+                        <tr>
+                            <th>本社</th>
+                            <td>〒150-6027
+                                東京都渋谷区恵比寿4丁目20番3号
+                                恵比寿ガーデンプレイスタワー27階</td>
+                        </tr>
+
+                    </table>
+                </div>
+
 
                 <?php if (has_post_thumbnail()) : ?>
                     <div class="main-content__img">
@@ -58,7 +76,7 @@
             </ul>
 
         <?php endwhile; ?>
-    <?php endif; ?>    
+    <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

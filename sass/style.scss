@@ -1,6 +1,7 @@
 @use "foundation" as f;
 @use "layouts";
 @use "component";
+@use "project";
 
 .kv {
     position: relative;
@@ -151,90 +152,5 @@
         line-height: 25px;
         text-align: left;
         color: f.$color_black;
-    }
-}
-.page {
-    .main {
-        width: f.get_vw(1080, f.$w_pc);
-        margin: auto;
-        background: red;
-
-        &__title {
-            font-family: "Helvetica Neue";
-            font-weight: 500;
-            font-size: f.calc_fz(60, f.$w_pc);
-            line-height: 1;
-            margin-bottom: f.get_vw(70, f.$w_pc);
-            span {
-                display: block;
-                font-family: f.$font_YuGothic;
-                font-weight: 500;
-                font-size: 15px;
-                letter-spacing: 0.02em;
-                line-height: 1;
-                color: f.$color_gray;
-                margin-top: f.get_vw(20, f.$w_pc);
-            }
-        }
-
-        &__tablist {
-            display: flex;
-            li {
-                height: f.get_vw(39, f.$w_pc);
-                border-radius: f.get_vw(19.5, f.$w_pc);
-                border: 1px solid f.$color_black;
-            }
-        }
-
-        #menu-company {
-            display: flex;
-            width: f.get_vw(900, f.$w_pc);
-            margin: auto;
-            margin-bottom: f.get_vw(100, f.$w_pc);
-            gap: f.get_vw(10, f.$w_pc);
-
-            .menu-item {
-                a {
-                    display: block;
-                    height: f.get_vw(39, f.$w_pc);
-                    border-radius: f.get_vw(19.5, f.$w_pc);
-                    border: 1px solid f.$color_black;
-                    font-family: "Helvetica Neue";
-                    font-weight: 500;
-                    font-size: f.calc_fz(18, f.$w_pc);
-                    line-height: 1;
-                    padding: f.get_vw(8, f.$w_pc) f.get_vw(27, f.$w_pc);
-                }
-                &.current-menu-item {
-                    a {
-                        background: f.$color_black;
-                        color: white;
-                    }
-                }
-            }
-        }
-
-        &-content {
-            &__title {
-                width: f.get_vw(900, f.$w_pc);
-                margin: auto;
-                font-family: "Helvetica Neue";
-                font-weight: 500;
-                font-size: f.calc_fz(35, f.$w_pc);
-                line-height: calc(42 / 35);
-                margin-bottom: f.get_vw(70, f.$w_pc);
-
-                span {
-                    display: block;
-                    font-family: f.$font_YuGothic;
-                    font-weight: 500;
-                    font-size: f.calc_fz(15, f.$w_pc);
-                    letter-spacing: 0.02em;
-                    line-height: 1;
-                    color: f.$color_gray;
-                    margin-top: f.get_vw(20, f.$w_pc);
-                }
-            }
-        }
     }
 }
