@@ -4,7 +4,7 @@
 
 <div class="main">
     <div class="container">
-        <p>お探しのページが見つかりませんでした。</p>
+        <p>お探しのページが見つかりませんでした。aa</p>
         <p>申し訳ございませんが、<a href="<?php echo home_url('/'); ?>">こちらのリンク</a>からトップページにお戻りください。</p>
     </div>
 </div>
